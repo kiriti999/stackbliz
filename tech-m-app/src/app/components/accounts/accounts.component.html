@@ -12,7 +12,7 @@
                 <div class="tm-col-cash" (click)='sortByBalance($event)'>
                     <div class="tm-col-caret arrow-up" *ngIf=toggle></div>
                     <div class="tm-col-caret arrow-down" *ngIf=!toggle></div>
-                    <div class="tm-col-data">Available Cash</div>
+                    <div class="tm-col-data" title="Sort by balance">Available Cash</div>
                 </div>
                 <div class="tm-col-change">
                     <div class="tm-col-data">Today's Change</div>
@@ -25,7 +25,7 @@
 
             <div *ngFor='let acc of chunks; let i = index'>
                 <div class="tm-rows">
-                    <div class="tm-row-account">{{acc.acctNum}}</div>
+                    <div class="tm-row-account" title="Account number">{{acc.acctNum}}</div>
                     <div class="tm-row-cash">
                         <div class="tm-row-amount"><span>$</span>{{acc.balance}}</div>
                         <div class="tm-row-percentage">-0.08% / $8,916.69</div>
